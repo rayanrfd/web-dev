@@ -1,0 +1,59 @@
+body {
+  font-family: monospace;
+  background-color: burlywood;
+}
+
+#screen {
+  border: 3px solid black;
+  height: 50px;
+  padding: 3px;
+  text-align: right;
+  background-color: thistle;
+  font-size: xx-large;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+#number-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+#operator-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.number-button {
+  text-align: center;
+  border: 1px solid black;
+  padding: 9px;
+  border-radius: 5px;
+  background-color: #9acd32;
+  font-size: xx-large;
+}
+
+.number-button:hover {
+  cursor: pointer;
+}
+
+.operator-button {
+  text-align: center;
+  border: 1px solid black;
+  padding: 9px;
+  border-radius: 5px;
+  background-color: yellowgreen;
+  font-size: xx-large;
+}
+
+.operator-button:hover {
+  cursor: pointer;
+}
