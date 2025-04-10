@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Age Calculator</title>
+        <link href="styles.css" rel="stylesheet"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        <script src="luxon.js"></script>
+    </head>
+    <body>
+        <h1>Age Calculator</h1>
+        <form>
+            <fieldset>
+                <label>Enter your birth date:</label>
+                <input type="text" id="datepicker">
+            </fieldset>
+            <button type="submit">Calculate</button>
+            <p></p>
+        </form>
+    </body>
+    <script type="module">
+        $( function() {
+            $( "#datepicker" ).datepicker();
+            $("form").on("submit", function (e) {
+                e.preventDefault()
+                const birthDate = $("#datepicker").val();
+                const now = luxon.DateTime.now()
+                console.log(now)
+            })
+        } );
+    </script>
+</html>
